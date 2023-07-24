@@ -1,0 +1,48 @@
+{
+  "name": "ESPLogger",
+  "version": "2.0.0",
+  "authors": {
+    "name": "Fabiano Riccardi",
+    "email": "fabiano.riccardi@outlook.com"
+  },
+  "description": "ESPLogger is an intuitive library to collect data on local storage and flush them to an external endpoint.",
+  "keywords": [
+    "data-collection",
+    "esp8266",
+    "esp32",
+    "data",
+    "logging",
+    "logger"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabianoriccardi/ESPLogger"
+  },
+  "licence": "LGPL-2.1-or-later",
+  "frameworks": [
+    "arduino"
+  ],
+  "platforms": [
+    "espressif8266",
+    "espressif32"
+  ],
+  "build": {
+    "libLDFMode": "deep"
+  },
+  "examples": [
+    {
+      "name": "Basic",
+      "base": "examples/Basic",
+      "files": [
+        "Basic.ino"
+      ]
+    },
+    {
+      "name": "PartialFlush",
+      "base": "examples/PartialFlush",
+      "files": [
+        "PartialFlush.ino"
+      ]
+    }
+  ]
+}

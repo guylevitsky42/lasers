@@ -1,0 +1,6 @@
+{
+    "configuration": "cpu=atmega328",
+    "board": "arduino:avr:nano",
+    "sketch": "sketch_aug10b\\sketch_aug10b.ino",
+    "port": "COM4"
+}

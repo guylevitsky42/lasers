@@ -1,0 +1,25 @@
+void calibrationLoop() {
+
+  while (!BUTTON_IS_PRESSED) {
+    potVal = ((float)analogRead(A0) / 1023) * 2 - 1;
+    movePitch(moduleIndex, potVal);
+    delay(10);
+  }
+
+  delay(10);
+  int servoIndex = ( moduleIndex * 2 ) + (int)calibratingPitch;
+  servosCalibration[servoIndex] = pulselen;
+
+
+  while (BUTTON_IS_PRESSED) delay(10); // wait for button release
+  moduleIndex += 1;
+
+
+  if (moduleIndex > NUM_MODULES) {
+    calibratingPitch = !calibratingPitch;
+    moduleIndex = 0;
+
+
+  }
+
+}
